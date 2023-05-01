@@ -19,24 +19,28 @@
        
 
 <label for="country">Enter your country</label>
-<input type="text" id="country" name="country" />
-
+<input type="text" id="country" name="country" pattern = "^[a-zA-Z]*$" required/>
+<span class="country-label"></span>
 
 
 <label for="Postcode">Enter your postcode</label>
-<input type="text" id="postcode" name="postcode" />
-<span class="error"></span>
+<input type="text" id="postcode" name="postcode" pattern="^([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}|GIR ?0A{2})$" required/>
+<span class="postcode-error"></span>
 
 
 <label for="password">Enter your password</label>
-    <input type="password" id="password" name="password" minlength="8"/>
-    <span class="error"></span>
+    <input type="password" id="password" name="password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+ <span class="pass-length"></span>
+ <span class="capitals"></span>
+<span class="numbers"></span>
+<span class="specials"></span>
 
 
 <label for="password-conf">Confirm your password</label>
-    <input type="password" id="password" name="password" />
-    <span class="error"></span>
+    <input type="password" id="password-conf" name="password-conf" required/>
+    <span class="pass-conf-error"></span>
 
+    <button type="submit" class="submit">Submit</button>
     </form>
 </div>
 </body>

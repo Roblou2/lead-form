@@ -56,7 +56,30 @@ input:invalid {
     box-sizing: border-box;
   }
   
+.no-error {
+  width: 100%;
+  padding: 0;
+display: block;
+margin-top: 0;
+margin-bottom: 10px;
+  font-size: 80%;
+  color: white;
+  background-color: green;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
   .error.active {
     padding: 0.3em;
+  }
+
+.invalid::before {
+    content: ' \274C';
+    
+  }
+
+.valid::after {
+    content: ' \2705'
   }
 
